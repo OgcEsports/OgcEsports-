@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Orbitron',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),
+    rgba(0,0,0,.85)),
+    url("ogc-logo.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at center,
+    rgba(0,140,255,.15),
+    transparent 60%);
+}
+
+/* NAVBAR */
+
+nav{
+    position:absolute;
+    top:0;
+    width:100%;
+    padding:25px 10%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:10;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    color:#00bfff;
+    text-shadow:0 0 15px #00bfff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00bfff;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    z-index:2;
+    max-width:800px;
+    padding:20px;
+}
+
+.hero-logo{
+    width:180px;
+    margin-bottom:20px;
+
+    animation:float 3s ease-in-out infinite;
+
+    filter:
+    drop-shadow(0 0 20px #00bfff);
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.hero h1{
+    font-size:4.5rem;
+    color:#ffffff;
+
+    text-shadow:
+    0 0 10px #00bfff,
+    0 0 25px #00bfff;
+}
+
+.tagline{
+    margin:20px 0;
+    font-size:1.4rem;
+    color:#c9eaff;
+}
+
+.desc{
+    color:#ccc;
+    line-height:1.8;
+    font-size:1rem;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 40px;
+
+    background:linear-gradient(45deg,#00bfff,#0066ff);
+
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+
+    font-weight:700;
+    letter-spacing:1px;
+
+    transition:.4s;
+
+    box-shadow:
+    0 0 15px rgba(0,191,255,.6);
+}
+
+.btn:hover{
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 25px rgba(0,191,255,1);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 10%;
+    text-align:center;
+}
+
+section h2{
+    font-size:2.5rem;
+    margin-bottom:25px;
+
+    color:#00bfff;
+
+    text-shadow:
+    0 0 10px #00bfff;
+}
+
+/* ABOUT */
+
+.about{
+    background:#07101f;
+}
+
+.about p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.9;
+    color:#ccc;
+}
+
+/* BENEFITS */
+
+.benefits{
+    background:#050816;
+}
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    margin-top:50px;
+}
+
+.card{
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    border-color:#00bfff;
+
+    box-shadow:
+    0 0 25px rgba(0,191,255,.5);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00bfff;
+}
+
+/* JOIN */
+
+.join{
+    background:
+    linear-gradient(rgba(0,0,0,.8),
+    rgba(0,0,0,.8)),
+    url("ogc-logo.png");
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* FOOTER */
+
+footer{
+    background:#02040d;
+    padding:35px;
+    text-align:center;
+
+    border-top:
+    2px solid #00bfff;
+}
+
+footer p{
+    margin:10px 0;
+    color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .tagline{
+        font-size:1rem;
+    }
+
+    section h2{
+        font-size:2rem;
+    }
+}
